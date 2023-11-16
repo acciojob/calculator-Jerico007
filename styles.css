@@ -1,2 +1,53 @@
 
 /* Your CSS Code here. */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.clac-body{
+    display: flex;
+    flex-direction: column;
+}
+
+.output-display{
+    height: 7vw;
+    background-color: rgb(232, 232, 232);
+    width: 100%;
+    font-size: 3vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 13px;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+button{
+    height: 7vw;
+    width: 7vw;
+    font-size: 3vw;
+    background-color : white;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#ans{
+    background-color: blue;
+    color:  white;
+}
+
+.calc-body{
+    box-shadow: 0px 0px 10px 0px black;
+}
