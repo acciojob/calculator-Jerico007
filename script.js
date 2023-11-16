@@ -12,7 +12,7 @@ function buttonInputs(e) {
   let id = e.target.id;
 
   if (id === "clr") {
-    output.innerText = "0";
+    output.innerText = "";
   } else if (id === "back") {
     backButton();
   } else if (id === "plus") {
@@ -57,56 +57,56 @@ function getNumber(id) {
     output.innerText = str;
   } else if (id === "block7") {
     let str = output.innerText;
-    if (str.length === 1 && str[0] === "0") {
+    if (str.length === 1 && str[0] === "0" || str === "NaN" || str === "Infinity") {
       str = "";
     }
     str += "7";
     output.innerText = str;
   } else if (id === "block6") {
     let str = output.innerText;
-    if (str.length === 1 && str[0] === "0") {
+    if (str.length === 1 && str[0] === "0" || str === "NaN" || str === "Infinity") {
       str = "";
     }
     str += "6";
     output.innerText = str;
   } else if (id === "block5") {
     let str = output.innerText;
-    if (str.length === 1 && str[0] === "0") {
+    if (str.length === 1 && str[0] === "0" || str === "NaN" || str === "Infinity") {
       str = "";
     }
     str += "5";
     output.innerText = str;
   } else if (id === "block4") {
     let str = output.innerText;
-    if (str.length === 1 && str[0] === "0") {
+    if (str.length === 1 && str[0] === "0" || str === "NaN" || str === "Infinity") {
       str = "";
     }
     str += "4";
     output.innerText = str;
   } else if (id === "block3") {
     let str = output.innerText;
-    if (str.length === 1 && str[0] === "0") {
+    if (str.length === 1 && str[0] === "0" || str === "NaN" || str === "Infinity") {
       str = "";
     }
     str += "3";
     output.innerText = str;
   } else if (id === "block2") {
     let str = output.innerText;
-    if (str.length === 1 && str[0] === "0") {
+    if (str.length === 1 && str[0] === "0" || str === "NaN" || str === "Infinity") {
       str = "";
     }
     str += "2";
     output.innerText = str;
   } else if (id === "block1") {
     let str = output.innerText;
-    if (str.length === 1 && str[0] === "0") {
+    if (str.length === 1 && str[0] === "0" || str === "NaN" || str === "Infinity") {
       str = "";
     }
     str += "1";
     output.innerText = str;
   } else if (id === "block0") {
     let str = output.innerText;
-    if (str.length === 1 && str[0] === "0") {
+    if (str.length === 1 && str[0] === "0" || str === "NaN" || str === "Infinity") {
       return;
     }
     str += "0";
@@ -128,7 +128,7 @@ function Multiply() {
 
 function Minus() {
   let str = output.innerText;
-  if (str.length === 1 && str[0] === "0") {
+  if (str.length === 1 && str[0] === "0" || str === "NaN" || str === "Infinity") {
     str = "";
   }
   str += "-";
@@ -136,7 +136,7 @@ function Minus() {
 }
 function OpenBracket(){
     let str = output.innerText;
-    if (str.length === 1 && str[0] === "0") {
+    if (str.length === 1 && str[0] === "0" || str === "NaN" || str === "Infinity") {
         str = "";
       }
     str += "(";
@@ -145,7 +145,7 @@ function OpenBracket(){
 
 function CloseBracket(){
     let str = output.innerText;
-    if(str.length === 1 && str[0] === "0")
+    if(str.length === 1 && str[0] === "0" || str === "NaN" || str === "Infinity")
     {
         return;
     }
@@ -172,17 +172,15 @@ function backButton() {
 
   str = str.join("");
 
-  if (str === "") {
-    output.innerText = 0;
-  } else {
+ 
     output.innerText = str;
-  }
+
 }
 
 function ansButton() {
     let ans = "";
 
-    if(output.innerText.length === 1 && output.innerText === "0")
+    if(output.innerText.length === 1 && output.innerText === "0" ||output.innerText  === "NaN" ||output.innerText  === "Infinity")
     {
         return;
     }
